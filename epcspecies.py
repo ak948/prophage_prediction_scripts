@@ -6,7 +6,7 @@
 import pandas as pd
 
 # Read the prophage_dataframe.tsv file into a DataFrame
-df = pd.read_csv('prophage_dataframe.tsv', sep='\t', low_memory=False)
+df = pd.read_csv('../prophage_dataframe.tsv', sep='\t', low_memory=False)
 
 # Create a new DataFrame to store vOTUs and their corresponding unique species combinations
 votu_species_df = pd.DataFrame(columns=['vOTU', 'Species_Combo'])
@@ -17,7 +17,7 @@ votu_species_dict = {}
 df = df.sort_values('Classification')
 # Iterate through each row in the original DataFrame
 for index, row in df.iterrows():
-    vOTU = row['Cluster']
+    vOTU = row['Enterococcus Prophage Species']
     species = row['Classification']
 
     # Check if the vOTU already exists in the dictionary

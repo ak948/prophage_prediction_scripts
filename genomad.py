@@ -59,7 +59,7 @@ def predicted_prophages(term):
             os.remove(f'{vibrant_file}')
             os.remove(f'{genomad_file}')
             with open('prophages.txt', "a") as myfile:
-                myfile.write(f'\t\t\t{vibrant_file}\t{genomad_file}\tBoth empty\n')
+                myfile.write(f'\t\t{vibrant_file}\t{genomad_file}\tBoth empty\n')
             print(f'{vibrant_file} and {genomad_file} empty\n')
         elif length_vibrant != 0 and length_genomad == 0:
             os.remove(f'{genomad_file}')
